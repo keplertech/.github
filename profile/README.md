@@ -1,4 +1,11 @@
-# KeplerTech
+<div align="center">
+  <a href="https://keplertech.io">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/keplertech/.github/main/profile/keplertech-wordmark-dark.svg">
+      <img alt="keplertech.io" src="https://raw.githubusercontent.com/keplertech/.github/main/profile/keplertech-wordmark-light.svg" width="340">
+    </picture>
+  </a>
+</div>
 
 **Open EDA tools, built for AI agents.**
 
