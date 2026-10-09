@@ -85,9 +85,9 @@ flowchart LR
     classDef api fill:#f0fdfa,stroke:#14b8a6,color:#042f2e,stroke-width:2px
     classDef tool fill:#f5f3ff,stroke:#8b5cf6,color:#2e1065,stroke-width:2px
     click slang "https://github.com/MikePopoloski/slang"
-    click naja-verilog "https://github.com/najaeda/naja-verilog"
+    click naja-verilog "https://github.com/keplertech/naja-verilog"
     click naja "https://github.com/najaeda/naja"
-    click najaif "https://github.com/najaeda/naja-if"
+    click najaif "https://github.com/keplertech/naja-if"
     click najaeda "https://pypi.org/project/najaeda/"
     click kf "https://github.com/keplertech/kepler-formal"
     click kfm "https://github.com/keplertech/kepler-formal-mcp"
