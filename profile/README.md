@@ -7,7 +7,7 @@
   </a>
 </div>
 
-**Open EDA tools, built for AI agents.**
+**Open EDA tools. Agents drive, engineers decide.**
 
 KeplerTech builds open-source EDA tools designed to be driven by AI agents, and usable standalone by engineers. The tools contain no AI: the agent brings the reasoning, the tools bring exact, reproducible results.
 
@@ -20,7 +20,7 @@ KeplerTech builds open-source EDA tools designed to be driven by AI agents, and 
 1. **Explore** with [naja-scope](https://github.com/keplertech/naja-scope): exact, token-bounded answers on RTL and netlists.
 2. **Edit** with any AI agent (any model, any MCP client), which decides and edits through [najaeda](https://pypi.org/project/najaeda/).
 3. **Verify** with [kepler-formal](https://github.com/keplertech/kepler-formal): proves each RTL or netlist edit keeps the same behavior.
-4. **Show** with [naja-schematic](https://github.com/keplertech/naja-schematic): renders the design and formal diagnoses.
+4. **Show** with [naja-schematic](https://github.com/keplertech/naja-schematic): renders the design and formal diagnoses, so an engineer can review every result.
 
 Loop until equivalence is proven. The loop works on RTL and netlists, before place and route: the agent edits RTL or netlists (refactor, optimize, fix), and each change is proven before it is kept.
 
@@ -100,10 +100,10 @@ flowchart LR
 | Tool | What it does |
 | --- | --- |
 | [naja-scope](https://github.com/keplertech/naja-scope) | MCP server giving drivers, loads, logic cones and source lines to any MCP client. On CVA6 (RISC-V core): 17/17 correct answers vs 10/17 with grep, with about 5x fewer input tokens (182k vs 888k). Details in the naja-scope README. |
-| [kepler-formal](https://github.com/keplertech/kepler-formal) | Formal verification that two design versions behave identically. RTL SEC checks the sequential behavior of SystemVerilog before vs after a change. Also gate-level LEC and SEC. Used by OpenROAD for flow regression. |
-| [kepler-formal-mcp](https://github.com/keplertech/kepler-formal-mcp) | MCP server for kepler-formal. |
+| [kepler-formal](https://github.com/keplertech/kepler-formal) | Formal proof that two design versions behave identically, or a counterexample. RTL SEC, RTL-to-gate SEC, gate-level SEC and LEC, from SystemVerilog, gate-level Verilog and Liberty. Used by [OpenROAD](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/blob/master/docs/user/FlowVariables.md#LEC_CHECK) and in hardware CI/CD. |
+| [kepler-formal-mcp](https://github.com/keplertech/kepler-formal-mcp) | MCP server for kepler-formal with three tools (`rtl_sec`, `gate_sec`, `gate_lec`). It reads design files and never edits them. |
 | [kepler-formal-action](https://github.com/keplertech/kepler-formal-action) | GitHub Action running equivalence checks on RTL and gate-level design changes in CI. |
-| [naja-schematic](https://github.com/keplertech/naja-schematic) | Schematic viewer for netlists and formal diagnoses. Opens in the browser and in VS Code. |
+| [naja-schematic](https://github.com/keplertech/naja-schematic) | Schematic viewer for netlists and formal diagnoses. Native, WebAssembly (browser) and VS Code builds. |
 | [naja](https://github.com/najaeda/naja) + [najaeda](https://pypi.org/project/najaeda/) | The common API. RTL and gate-level designs, hierarchy and bit-level connectivity, primitive functional models, optimization and editing. |
 
 ## Build your own tool
@@ -119,5 +119,7 @@ Documentation: [najaeda.readthedocs.io](https://najaeda.readthedocs.io/en/latest
 ## Links
 
 - Website: [keplertech.io](https://keplertech.io)
+- PyPI: [najaeda](https://pypi.org/project/najaeda/)
+- LinkedIn: [keplertech-io](https://www.linkedin.com/company/keplertech-io)
 - Chat: [Matrix #naja:fossi-chat.org](https://matrix.to/#/#naja:fossi-chat.org)
 - Contact: [contact@keplertech.io](mailto:contact@keplertech.io)
